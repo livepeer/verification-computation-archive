@@ -1,0 +1,22 @@
+{
+  "name": "verification-code-archive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js index.js lib/**"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promisify": "^5.0.0",
+    "ethereumjs-util": "^5.1.2",
+    "ipfs-api": "^14.3.5",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-google": "^0.9.1"
+  }
+}
