@@ -4,7 +4,7 @@ MAINTAINER Yondon Fu "yondon@livepeer.org"
 WORKDIR /app/
 COPY . /app/
 
-RUN apk --no-cache add bash git
+RUN apk --no-cache add bash git python make g++
 RUN npm install
 
 ENTRYPOINT bash setup.sh && node index.js $ARG0 $ARG1
