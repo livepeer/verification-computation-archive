@@ -6,8 +6,6 @@ A Docker Node.js application for transcoding verification.
 
 ```
 cd verification-computation-archive
-# Fetch static Linux builds of ffmpeg and go-ipfs
-bash fetch_binaries.sh
 # Build Docker image
 docker build -t verification .
 # Run Docker application

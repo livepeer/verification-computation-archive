@@ -1,10 +1,13 @@
-FROM mhart/alpine-node:8
+FROM yondon/livepeer-ubuntu1604:latest
 MAINTAINER Yondon Fu "yondon@livepeer.org"
 
 WORKDIR /app/
-COPY . /app/
+COPY package.json /app/package.json
+COPY index.js /app/index.js
+COPY lib /app/lib
+COPY setup.sh /app/setup.sh
 
-RUN apk --no-cache add bash git python make g++
-RUN npm install
+RUN chmod 755 /app/setup.sh
+RUN npm install --only=production
 
-ENTRYPOINT bash setup.sh && node index.js $ARG0 $ARG1
+ENTRYPOINT ./setup.sh && node index.js $ARG0 $ARG1

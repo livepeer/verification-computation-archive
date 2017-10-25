@@ -1,0 +1,11 @@
+FROM yondon/livepeer-ubuntu1604:latest
+MAINTAINER Yondon Fu "yondon@livepeer.org"
+
+WORKDIR /app/
+COPY package.json /app/package.json
+COPY lib /app/lib
+COPY test /app/test
+
+RUN npm install
+
+ENTRYPOINT npm test
